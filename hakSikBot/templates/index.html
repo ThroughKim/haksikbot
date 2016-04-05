@@ -1,13 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>학식 테이블</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
-<br>
-{% for item in menu %}
-    {{ item }} <br>
-{% endfor %}
+<div class="container">
+    <h2>상록원</h2>
+    <table class="table table-striped" style="width: 50%">
+        <thead>
+            <tr>
+                <th>백반코너</th>
+                <th>일품코너</th>
+                <th>양식코너</th>
+                <th>뚝배기코너</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{menu.sang_bek_today_menu|safe}}</td>
+                <td>{{menu.sang_ill_today_menu|safe}}</td>
+                <td>{{menu.sang_yang_today_menu|safe}}</td>
+                <td>{{menu.sang_dduk_today_menu|safe}}</td>
+            </tr>
+            <tr>
+                <td>{{menu.sang_bek_today_price}}</td>
+                <td>{{menu.sang_ill_today_price}}</td>
+                <td>{{menu.sang_yang_today_price}}</td>
+                <td>{{menu.sang_dduk_today_price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h2>솥앤누들</h2>
+    <table class="table table-striped" style="width: 50%">
+        <tbody>
+            <tr>
+                <td>{{menu.sot_1_menu|safe}}</td>
+                <td>{{menu.sot_2_menu|safe}}</td>
+                <td>{{menu.sot_3_menu|safe}}</td>
+                <td>{{menu.sot_4_menu|safe}}</td>
+                <td>{{menu.sot_5_menu|safe}}</td>
+            </tr>
+            <tr>
+                <td>{{menu.sot_1_price}}</td>
+                <td>{{menu.sot_2_price}}</td>
+                <td>{{menu.sot_3_price}}</td>
+                <td>{{menu.sot_4_price}}</td>
+                <td>{{menu.sot_5_price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h2>그루터기</h2>
+    <table class="table table-striped" style="width: 50%">
+        <thead>
+            <tr>
+                <td>A코너</td>
+                <td>B코너</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{menu.gru_a_menu|safe}}</td>
+                <td>{{menu.gru_b_menu|safe}}</td>
+            </tr>
+            <tr>
+                <td>{{menu.gru_a_price}}</td>
+                <td>{{menu.gru_b_price}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h2>팬엔누들</h2>
+    <table class="table table-striped" style="width: 50%">
+        <thead>
+            <tr>
+                <td>팬</td>
+                <td>누들</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{menu.pan_pan_menu|safe}}</td>
+                <td>{{menu.pan_noodle_menu|safe}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="container">
+    <h2>아리수</h2>
+    <table class="table table-striped" style="width: 50%">
+        <tbody>
+            <tr>
+                <td>{{menu.arisu_menu|safe}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 </body>
 </html>
