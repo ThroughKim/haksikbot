@@ -1,6 +1,8 @@
+#!/root/.pyenv/versions/py3.4.1/bin/python3.4
+
 from django.template.response import TemplateResponse
 from bs4 import BeautifulSoup
-from urllib2 import urlopen
+from urllib.request import urlopen
 import datetime
 
 def home_page(request):
