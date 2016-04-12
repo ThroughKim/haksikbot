@@ -1,11 +1,4 @@
-"""
-WSGI config for haksikbot project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/1.9/howto/deployment/wsgi/
-"""
+#!/root/.pyenv/versions/py3.4.1/bin/python3.4
 
 import os
 

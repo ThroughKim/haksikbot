@@ -1,6 +1,9 @@
+#!/root/.pyenv/versions/py3.4.1/bin/python3.4
+
 import facebook
 import datetime
 from selenium import webdriver
+from pyvirtualdisplay import Display
 
 
 def write_post():
@@ -15,9 +18,12 @@ def write_post():
     photo.close()
 
 def get_screenshot():
+    display = Display(visible=0, size=(1024, 860))
+    display.start()
     browser = webdriver.Firefox()
     browser.get('http://localhost:8000')
     browser.save_screenshot('screenshot.png')
     browser.quit()
+    display.stop()
 
 write_post()

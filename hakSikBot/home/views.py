@@ -1,6 +1,8 @@
+#!/root/.pyenv/versions/py3.4.1/bin/python3.4
+
 from django.template.response import TemplateResponse
 from bs4 import BeautifulSoup
-from urllib2 import urlopen
+from urllib.request import urlopen
 import datetime
 
 def home_page(request):
@@ -115,8 +117,6 @@ def get_menu():
 
     sot_4_tds = trs[21].find_all('td')
     sot_4_today_spans = sot_4_tds[today_span_num - 2].find_all('span')
-    for item in sot_4_today_spans:
-        print(item)
     sot_4_menu = sot_4_today_spans[0].text.replace("\r\n", "<br>")
     sot_4_price = sot_4_today_spans[1].text
 
