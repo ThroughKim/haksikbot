@@ -76,27 +76,27 @@ def get_menu():
     menu_dict.update(sangrok_dict)
 
     sot_1_tds = trs[18].find_all('td')
-    sot_1_today_spans = sot_1_tds[today_span_num].find_all('span')
+    sot_1_today_spans = sot_1_tds[today_span_num - 1].find_all('span')
     sot_1_menu = sot_1_today_spans[0].text.replace("\r\n", "<br>")
     sot_1_price = sot_1_today_spans[1].text
 
     sot_2_tds = trs[19].find_all('td')
-    sot_2_today_spans = sot_2_tds[today_span_num].find_all('span')
+    sot_2_today_spans = sot_2_tds[today_span_num - 2].find_all('span')
     sot_2_menu = sot_2_today_spans[0].text.replace("\r\n", "<br>")
     sot_2_price = sot_2_today_spans[1].text
 
     sot_3_tds = trs[20].find_all('td')
-    sot_3_today_spans = sot_3_tds[today_span_num].find_all('span')
+    sot_3_today_spans = sot_3_tds[today_span_num - 2].find_all('span')
     sot_3_menu = sot_3_today_spans[0].text.replace("\r\n", "<br>")
     sot_3_price = sot_3_today_spans[1].text
 
     sot_4_tds = trs[21].find_all('td')
-    sot_4_today_spans = sot_4_tds[today_span_num].find_all('span')
+    sot_4_today_spans = sot_4_tds[today_span_num-2].find_all('span')
     sot_4_menu = sot_4_today_spans[0].text.replace("\r\n", "<br>")
     sot_4_price = sot_4_today_spans[1].text
 
     sot_5_tds = trs[22].find_all('td')
-    sot_5_today_spans = sot_5_tds[today_span_num].find_all('span')
+    sot_5_today_spans = sot_5_tds[today_span_num - 2].find_all('span')
     sot_5_menu = sot_5_today_spans[0].text.replace("\r\n", "<br>")
     sot_5_price = sot_5_today_spans[1].text
 
@@ -133,10 +133,10 @@ def get_menu():
     menu_dict.update(gru_dict)
 
     pan_pan_tds = trs[30].find_all('td')
-    pan_pan_menu = pan_pan_tds[today_span_num].text.replace("\r\n", "<br>")
+    pan_pan_menu = pan_pan_tds[today_span_num - 1].text.replace("\r\n", "<br>")
 
     pan_noodle_tds = trs[31].find_all('td')
-    pan_noodle_menu = pan_noodle_tds[today_span_num].text.replace("\r\n", "<br>")
+    pan_noodle_menu = pan_noodle_tds[today_span_num - 1].text.replace("\r\n", "<br>")
 
     pan_dict = dict(
         pan_pan_menu=pan_pan_menu,
