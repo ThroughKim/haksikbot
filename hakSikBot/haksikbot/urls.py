@@ -20,5 +20,6 @@ from django.conf import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', 'home.views.home_page', name='home'),
+    url(r'^total/', 'home.views.total_table', name='total_table')
 ]
 
