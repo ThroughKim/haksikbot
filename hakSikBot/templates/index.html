@@ -64,6 +64,37 @@
         </table>
     </div>
     <div class="container">
+        <h2>기숙사식당</h2>
+        <table class="table table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <td>A코너</td>
+                    <td>B코너</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{menu.dorm_a_menu|safe}}</td>
+                    <td>{{menu.dorm_b_menu|safe}}</td>
+                </tr>
+                <tr>
+                    <td>{{menu.dorm_a_price}}</td>
+                    <td>{{menu.dorm_b_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>아리수</h2>
+        <table class="table table-striped" style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>{{menu.arisu_menu|safe}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
         <h2>팬앤누들</h2>
         <table class="table table-striped" style="width: 100%">
             <thead>
@@ -97,16 +128,6 @@
                     <td>{{menu.sot_3_price}}</td>
                     <td>{{menu.sot_4_price}}</td>
                     <td>{{menu.sot_5_price}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="container">
-        <h2>아리수</h2>
-        <table class="table table-striped" style="width: 100%">
-            <tbody>
-                <tr>
-                    <td>{{menu.arisu_menu|safe}}</td>
                 </tr>
             </tbody>
         </table>

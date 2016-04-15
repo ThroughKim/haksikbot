@@ -173,5 +173,22 @@ def get_menu():
     arisu_dict = dict(arisu_menu=arisu_menu)
     menu_dict.update(arisu_dict)
 
+    dorm_a_tds = trs[38].find_all('td')
+    dorm_a_today_spans = dorm_a_tds[today_span_num].find_all('span')
+    dorm_a_menu = dorm_a_today_spans[0].text.replace("\r\n", "<br>")
+    dorm_a_price = dorm_a_today_spans[1].text
+
+    dorm_b_tds = trs[40].find_all('td')
+    dorm_b_today_spans = dorm_b_tds[today_span_num].find_all('span')
+    dorm_b_menu = dorm_b_today_spans[0].text.replace("\r\n", "<br>")
+    dorm_b_price = dorm_b_today_spans[1].text
+
+    dorm_dict = dict(
+        dorm_a_menu=dorm_a_menu,
+        dorm_a_price=dorm_a_price,
+        dorm_b_menu=dorm_b_menu,
+        dorm_b_price=dorm_b_price
+    )
+    menu_dict.update(dorm_dict)
 
     return(menu_dict)
