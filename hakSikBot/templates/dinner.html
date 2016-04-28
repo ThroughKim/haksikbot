@@ -1,10 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>학식 테이블</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+    <style>
+        body {
+            font-family: 'Nanum Gothic', serif;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h2>상록원</h2>
+        <table class="table table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>일품코너</th>
+                    <th>뚝배기코너</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{menu.sang_ill_today_menu|safe}}</td>
+                    <td>{{menu.sang_dduk_today_menu|safe}}</td>
+                </tr>
+                <tr>
+                    <td>{{menu.sang_ill_today_price}}</td>
+                    <td>{{menu.sang_dduk_today_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>그루터기</h2>
+        <table class="table table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>A코너</th>
+                    <th>B코너</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{menu.gru_a_menu|safe}}</td>
+                    <td>{{menu.gru_b_menu|safe}}</td>
+                </tr>
+                <tr>
+                    <td>{{menu.gru_a_price}}</td>
+                    <td>{{menu.gru_b_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>기숙사식당</h2>
+        <table class="table table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>A코너</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{menu.dorm_a_menu|safe}}</td>
+                </tr>
+                <tr>
+                    <td>{{menu.dorm_a_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>아리수</h2>
+        <table class="table table-striped" style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>{{menu.arisu_menu|safe}}</td>
+                </tr>
+                    <td>{{menu.arisu_price|safe}}</td>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>팬앤누들</h2>
+        <table class="table table-striped" style="width: 100%">
+            <thead>
+                <tr>
+                    <th>팬</th>
+                    <th>누들</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{menu.pan_pan_menu|safe}}</td>
+                    <td>{{menu.pan_noodle_menu|safe}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>솥앤누들</h2>
+        <table class="table table-striped" style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>{{menu.sot_1_menu|safe}}</td>
+                    <td>{{menu.sot_2_menu|safe}}</td>
+                    <td>{{menu.sot_3_menu|safe}}</td>
+                    <td>{{menu.sot_4_menu|safe}}</td>
+                    <td>{{menu.sot_5_menu|safe}}</td>
+                </tr>
+                <tr>
+                    <td>{{menu.sot_1_price}}</td>
+                    <td>{{menu.sot_2_price}}</td>
+                    <td>{{menu.sot_3_price}}</td>
+                    <td>{{menu.sot_4_price}}</td>
+                    <td>{{menu.sot_5_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>

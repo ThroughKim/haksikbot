@@ -68,8 +68,8 @@
         <table class="table table-striped" style="width: 100%">
             <thead>
                 <tr>
-                    <td>A코너</td>
-                    <td>B코너</td>
+                    <th>A코너</th>
+                    <th>B코너</th>
                 </tr>
             </thead>
             <tbody>
@@ -95,6 +95,27 @@
         </table>
     </div>
     <div class="container">
+        <h2>솥앤누들</h2>
+        <table class="table table-striped" style="width: 100%">
+            <tbody>
+                <tr>
+                    <td>{{menu.sot_1_menu|safe}}</td>
+                    <td>{{menu.sot_2_menu|safe}}</td>
+                    <td>{{menu.sot_3_menu|safe}}</td>
+                    <td>{{menu.sot_4_menu|safe}}</td>
+                    <td>{{menu.sot_5_menu|safe}}</td>1`
+                </tr>
+                <tr>
+                    <td>{{menu.sot_1_price}}</td>
+                    <td>{{menu.sot_2_price}}</td>
+                    <td>{{menu.sot_3_price}}</td>
+                    <td>{{menu.sot_4_price}}</td>
+                    <td>{{menu.sot_5_price}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
         <h2>팬앤누들</h2>
         <table class="table table-striped" style="width: 100%">
             <thead>
@@ -111,27 +132,7 @@
             </tbody>
         </table>
     </div>
-    <div class="container">
-        <h2>솥앤누들</h2>
-        <table class="table table-striped" style="width: 100%">
-            <tbody>
-                <tr>
-                    <td>{{menu.sot_1_menu|safe}}</td>
-                    <td>{{menu.sot_2_menu|safe}}</td>
-                    <td>{{menu.sot_3_menu|safe}}</td>
-                    <td>{{menu.sot_4_menu|safe}}</td>
-                    <td>{{menu.sot_5_menu|safe}}</td>
-                </tr>
-                <tr>
-                    <td>{{menu.sot_1_price}}</td>
-                    <td>{{menu.sot_2_price}}</td>
-                    <td>{{menu.sot_3_price}}</td>
-                    <td>{{menu.sot_4_price}}</td>
-                    <td>{{menu.sot_5_price}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+
 
 </body>
 </html>
