@@ -13,16 +13,16 @@ def write_post():
     graph = facebook.GraphAPI(post_token)
     #graph.put_object("1681679528749683", "feed", message=get_menu())
     get_screenshot()
-    photo = open("screenshot.png", "rb")
-    graph.put_photo(message=today_date + "의 점심 식단표입니다~ \r\n점심 식단표는 매일 오전 11시에 게시됩니다. \r\n도움이 되셨다면 좋아요 눌러주세요~~!!", image=photo.read())
+    photo = open("screenshot_dinner.png", "rb")
+    graph.put_photo(message=today_date + "의 저녁 식단표입니다~ \r\n저녁 식단표는 매일 오후 5시에 게시됩니다. \r\n도움이 되셨다면 좋아요 눌러주세요~~!!", image=photo.read())
     photo.close()
 
 def get_screenshot():
     display = Display(visible=0, size=(1024, 860))
     display.start()
     browser = webdriver.Firefox()
-    browser.get('http://localhost:8000')
-    browser.save_screenshot('screenshot.png')
+    browser.get('http://localhost:8000/dinner')
+    browser.save_screenshot('screenshot_dinner.png')
     browser.quit()
     display.stop()
 
