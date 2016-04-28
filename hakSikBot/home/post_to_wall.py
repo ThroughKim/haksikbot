@@ -14,7 +14,7 @@ def write_post():
     #graph.put_object("1681679528749683", "feed", message=get_menu())
     get_screenshot()
     photo = open("screenshot.png", "rb")
-    graph.put_photo(message=today_date + "의 점심 식단표입니다~", image=photo.read())
+    graph.put_photo(message=today_date + "의 점심 식단표입니다~ \r\n식단표는 매일 오전 11시에 게시됩니다. \r\n도움이 되셨다면 좋아요 눌러주세요~~!!", image=photo.read())
     photo.close()
 
 def get_screenshot():
