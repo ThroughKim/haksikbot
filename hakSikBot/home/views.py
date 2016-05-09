@@ -292,6 +292,7 @@ def get_dinner_menu():
     )
     menu_dict.update(sot_dict)
 
+    """
     gru_a_tds = trs[27].find_all('td')
     gru_a_today_spans = gru_a_tds[today_span_num].find_all('span')
     gru_a_menu = gru_a_today_spans[0].text.replace("\r\n", "<br>")
@@ -321,8 +322,9 @@ def get_dinner_menu():
         pan_noodle_menu=pan_noodle_menu
     )
     menu_dict.update(pan_dict)
+    """
 
-    arisu_tds = trs[34].find_all('td')
+    arisu_tds = trs[27].find_all('td')
     arisu_today_spans = arisu_tds[today_span_num].find_all('span')
     arisu_menu = arisu_today_spans[0].text.replace("\r\n", "<br>")
     arisu_price = arisu_today_spans[1].text
@@ -330,7 +332,7 @@ def get_dinner_menu():
                       arisu_price=arisu_price)
     menu_dict.update(arisu_dict)
 
-    dorm_a_tds = trs[39].find_all('td')
+    dorm_a_tds = trs[32].find_all('td')
     dorm_a_today_spans = dorm_a_tds[today_span_num].find_all('span')
     dorm_a_menu = dorm_a_today_spans[0].text.replace("\r\n", "<br>")
     dorm_a_price = dorm_a_today_spans[1].text
